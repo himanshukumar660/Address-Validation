@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+
+	<title>Address Validation</title>
+	<!-- Font Awesome -->
+	<link href="css/popup.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="./css/github.css">
+	<script src="./js/highlight.pack.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs0yjICEX_KiaE65lPBTHs69v1lEtjzp8"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
+	<!-- Your custom styles (optional) -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+</head>
+
+<body>
+	<!--Card image-->
+
+	<section style="width: 100%;height: 100%">
+
+		<div class="card" style="position:absolute;width: 22.5%;top: 15rem;left: 5%;height: auto; border-radius: 0.5rem;margin-bottom: 10rem;box-shadow: none">
+			<div class="card-body">
+
+				<div class="form-header" style="border-radius: 5rem;padding-bottom: 1%;">
+					<h3>Address Validation</h3>
+				</div>
+				<!--Body-->
+				<div class="md-form">
+					<textarea type="text" id="AddressLoc" class="md-textarea" placeholder="Address"></textarea>
+				</div>
+
+				<div class="text-center">
+					<button class="btn btn-rounded waves-effect waves-light search" style="font-size: 18">Validate</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="card" style="position:absolute; width: 67.5%; top: 4%;right: 2.5%;min-height: 91%;border-radius: 0.5rem;">
+			<div class="card-body">
+				<!--Body-->
+				<div class="text-center">
+					<button class="btn btn-rounded waves-effect waves-light detail_btn" style="font-size: 15">Details</button>
+					<button class="btn btn-rounded  waves-effect waves-light map_btn" style="font-size: 15">Map</button>
+					<button class="btn btn-rounded  waves-effect waves-light json_btn" style="font-size: 15">Json</button>
+				</div>
+
+				<div id="details" style="background-color:#f7f7f7;position:absolute;width: 94%; height: 83.5%;padding: 2% 2% 2% 2%;margin: 1% 1% 1% 1%">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script>
+	function initAutocomplete() {
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('AddressLoc');
+        var searchBox = new google.maps.places.SearchBox(input);
+
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+          if (places.length == 0) {
+            return;
+          }
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+          });
+        });
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKmagUWrSELkuVwIJ-gvo5mS-dex3jJlU&libraries=places&callback=initAutocomplete" async defer></script>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+	<script src="js/popup.js"></script>
+
+</body>
+
+</html>
