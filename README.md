@@ -36,4 +36,19 @@
 - Since, I don't have address database, creation of API doesn't help much.
 - The Address Validation is not very accurate, though it provides correct formmatted address. But, it helpsa lot over manual vaidation of the address.
 
+## Getting Started with contribution
+if you have liked this project, I immensly welcome you to contribute and make this even more successful. So, the getting started with the projct is quite simple. Since, it is not built on any MVC Framework, anyone can get started with just downloading this repository and running the popup.html file in their browser.
+
+- popup.css : This file could be found in the assests/css folder. This is mainly responsible for all the layouts and designing.
+- popup.js : This file is maily reponsible for all the API calls and rendering of the data.
+
+If you want to get started, follow the steps given below :
+ 1. Clone the repository.
+ 2. Open the repo in your favourite text editor.
+ 3. Go through the files that I have mentioned above.
+ 4. Follow the codes. Now, if you have completed the above steps, you could now start contributing :
+ 5. if you wish to raise an issue, follow github instructions on how to raise them.
+ 6. if you wish to work on existing issues, just go to issue section, and check if that has been already assigned to anyone else. If not, just comment that you are interested on working on that particular issue. You would be then assigned that issue, if it has not already been taken by others.
+ 7. if you have made certain changes, just commit to your local branch and raise a PULL request here. You could follow Github instructions on how to raise a Pull Request. Your code will then be validated and possibly merged.
+
 ## BEST SUPPORTED ON CHROME ;)
