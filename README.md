@@ -37,7 +37,7 @@
 - The Address Validation is not very accurate, though it provides correct formmatted address. But, it helpsa lot over manual vaidation of the address.
 
 ## Getting Started with contribution
-if you have liked this project, I immensly welcome you to contribute and make this even more successful. So, the getting started with the projct is quite simple. Since, it is not built on any MVC Framework, anyone can get started with just downloading this repository and running the popup.html file in their browser.
+if you have liked this project, I immensly welcome you to contribute and make this even more successful. So, the getting started with the projct is quite simple. Since, it is not built on any MVC Framework, anyone can get started with just downloading this repository and running the index.html file in their browser.
 
 - popup.css : This file could be found in the assests/css folder. This is mainly responsible for all the layouts and designing.
 - popup.js : This file is maily reponsible for all the API calls and rendering of the data.
